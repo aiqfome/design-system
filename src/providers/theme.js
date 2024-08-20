@@ -67,6 +67,7 @@ const colors = {
   // common
   red: '#DE4E51',
   pink: '#EB5387',
+  darkPink: '#9824D4',
   purple: '#A652B4',
   deepPurple: '#8654DE',
   indigo: '#4C60D0',
