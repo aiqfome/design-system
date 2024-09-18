@@ -52,8 +52,8 @@ export const TimePickerMinSec = React.forwardRef(
         console.log('input:', e)
       },
       ...props
-    },
-    ref
+    }: any,
+    ref: unknown
   ) => {
     const [showPicker, setShowPicker] = useState(false)
     const [inputValue, setInputValue] = useState(value || '')
@@ -69,8 +69,8 @@ export const TimePickerMinSec = React.forwardRef(
         .replace(/(:\d{2})\d+?$/, '$1')
     }
 
-    const handleInputOnChange = e => {
-      const { value = '' } = e?.target || {}
+    const handleInputOnChange = (e: { target: {} }) => {
+      const { value = '' } = e?.target || ({} as any)
       if (getValue && onChangeInput) {
         onChangeInput(value)
         return ''
